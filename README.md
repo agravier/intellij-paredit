@@ -8,7 +8,7 @@ Paredit (Structural Editing) is a fancy editing style to edit code especially fo
 
 ## ShortCuts
 
-![](./pics/shotcuts.png)
+![](./pics/shortcuts.png)
 
 ## License
 
