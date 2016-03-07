@@ -1,17 +1,18 @@
 <idea-plugin version="2">
-  <id>com.yourcompany.unique.plugin.id</id>
+  <id>zjhmale.rainbow</id>
   <name>Paredit</name>
   <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <vendor email="zjhmale@gmail.com" url="https://github.com/zjhmale">zjhmale</vendor>
 
   <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+    Paredit for IntelliJ IDEA-based IDEs
     ]]></description>
 
   <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+    <p>1.0:</p>
+    <ul>
+      <li>Support basic structural editing</li>
+    </ul>
     ]]>
   </change-notes>
 
