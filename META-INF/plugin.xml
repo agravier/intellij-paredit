@@ -1,0 +1,76 @@
+<idea-plugin version="2">
+  <id>com.yourcompany.unique.plugin.id</id>
+  <name>Plugin display name here</name>
+  <version>1.0</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <action id="zjhmale.paredit.BarfBackwardsAction"
+            class="zjhmale.paredit.BarfBackwardsAction"
+            text="Barf Backwards" description="Spit out the first element in the current s-expression">
+      <keyboard-shortcut keymap="$default" first-keystroke="alt shift 9"/>
+      <add-to-group group-id="EditMenu" anchor="last"/>
+    </action>
+
+    <action id="zjhmale.paredit.BarfForwardsAction"
+            class="zjhmale.paredit.BarfForwardsAction"
+            text="Barf Forwards" description="Spit out the last element in the current s-expression">
+      <keyboard-shortcut keymap="$default" first-keystroke="alt shift 0"/>
+      <add-to-group group-id="EditMenu" anchor="last"/>
+    </action>
+
+    <action id="zjhmale.paredit.SlurpBackwardsAction"
+            class="zjhmale.paredit.SlurpBackwardsAction"
+            text="Slurp Backwards" description="Swallow the element preceeding the current s-expression">
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt shift 9"/>
+      <add-to-group group-id="EditMenu" anchor="last"/>
+    </action>
+
+    <action id="zjhmale.paredit.SlurpForwardsAction"
+            class="zjhmale.paredit.SlurpForwardsAction"
+            text="Slurp Forwards" description="Swallow the element following the current s-expression">
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt shift 0"/>
+      <add-to-group group-id="EditMenu" anchor="last"/>
+    </action>
+
+    <action id="zjhmale.paredit.SpliceAction"
+            class="zjhmale.paredit.SpliceAction"
+            text="Splice S-Expression" description="Splice the current s-expression into it’s parent">
+      <keyboard-shortcut keymap="$default" first-keystroke="alt meta S"/>
+      <add-to-group group-id="EditMenu" anchor="last"/>
+    </action>
+  </actions>
+
+</idea-plugin>
