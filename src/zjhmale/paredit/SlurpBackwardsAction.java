@@ -14,11 +14,6 @@ public final class SlurpBackwardsAction extends EditorAction {
         super(new SlurpBackwardsActionHandler());
     }
 
-    public static PsiElement firstChildSexp(PsiElement element) {
-        PsiElement[] children = element.getChildren();
-        return children.length != 0 ? children[0] : null;
-    }
-
     private static class SlurpBackwardsActionHandler extends AbstractSexpActionHandler {
         protected SlurpBackwardsActionHandler() {
             super();
@@ -36,7 +31,7 @@ public final class SlurpBackwardsAction extends EditorAction {
 
             PsiElement copy = slurpee.copy();
             slurpee.delete();
-            sexp.addBefore(copy, firstChildSexp(sexp));
+            sexp.addBefore(copy, SexpUtils.firstChildSexp(sexp));
         }
     }
 }

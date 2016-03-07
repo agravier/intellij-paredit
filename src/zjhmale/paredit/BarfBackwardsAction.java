@@ -12,11 +12,6 @@ public final class BarfBackwardsAction extends EditorAction {
         super(new BarfBackwardsActionHandler());
     }
 
-    public static PsiElement firstChildSexp(PsiElement element) {
-        PsiElement[] children = element.getChildren();
-        return children.length != 0 ? children[0] : null;
-    }
-
     private static class BarfBackwardsActionHandler extends AbstractSexpActionHandler {
         protected BarfBackwardsActionHandler() {
             super();
@@ -24,7 +19,7 @@ public final class BarfBackwardsAction extends EditorAction {
 
         @Override
         protected void executeWriteAction(PsiElement sexp, Editor editor, Project project, DataContext dataContext) {
-            PsiElement barfee = firstChildSexp(sexp);
+            PsiElement barfee = SexpUtils.firstChildSexp(sexp);
             if (barfee == null) {
                 return;
             }

@@ -19,7 +19,6 @@ public class SpliceAction extends EditorAction {
 
         @Override
         protected void executeWriteAction(PsiElement sexp, Editor editor, Project project, DataContext dataContext) {
-            System.out.println("caret element -> " + sexp.getText());
             PsiElement first = sexp.getFirstChild();
             PsiElement last = sexp.getLastChild();
 
