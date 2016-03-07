@@ -29,38 +29,23 @@ public final class SlurpForwardsAction extends EditorAction {
             System.out.println("current caret -> " + sexp.getText());
 
             PsiElement slurpee = PsiTreeUtil.getNextSiblingOfType(sexp, PsiElement.class);
-            while (slurpee instanceof PsiWhiteSpaceImpl) {
+
+            while (slurpee != null && ((slurpee instanceof PsiWhiteSpaceImpl) || slurpee.getText().equals(" "))) {
                 slurpee = PsiTreeUtil.getNextSiblingOfType(slurpee, PsiElement.class);
             }
+
             if (slurpee == null) {
                 return;
             }
 
-            System.out.println("slurpee -> " + slurpee.getText());
-            System.out.println("slurpee class -> " + slurpee.getClass());
-            System.out.println("last child -> " + sexp.getLastChild().getText());
-            System.out.println("last child class -> " + sexp.getLastChild().getClass());
-
-            System.out.println("slurpee is valid " + slurpee.isValid());
-            System.out.println("slurpee is writable " + slurpee.isWritable());
-            System.out.println("last child is valid " + sexp.getLastChild().isValid());
-            System.out.println("last child is wriable " + sexp.getLastChild().isWritable());
-
-            //sexp.getLastChild().delete();
-            //slurpee.delete();
-            //((LeafPsiElement) slurpee).delete();
             PsiElement copy = slurpee.copy();
             slurpee.delete();
             PsiElement lastChild = lastChildSexp(sexp);
-            System.out.println("copy -> " + copy.getText());
             if (lastChild != null) {
-                System.out.println("last child -> " + lastChild.getText());
                 sexp.addAfter(copy, lastChild);
             } else {
-                System.out.println("do not have last child");
                 sexp.addBefore(copy, sexp.getLastChild());
             }
         }
     }
-
 }

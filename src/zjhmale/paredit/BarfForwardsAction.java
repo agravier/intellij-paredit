@@ -38,5 +38,4 @@ public final class BarfForwardsAction extends EditorAction {
             }
         }
     }
-
 }

@@ -39,5 +39,4 @@ public final class SlurpBackwardsAction extends EditorAction {
             sexp.addBefore(copy, firstChildSexp(sexp));
         }
     }
-
 }
