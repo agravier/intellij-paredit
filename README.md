@@ -8,7 +8,11 @@ Paredit (Structural Editing) is a fancy editing style to edit code especially fo
 
 ## ShortCuts
 
-![](./pics/shortcuts.png)
+* Barf Backwards  ⌥⌘9
+* Barf Forwards   ⌥⌘0
+* Slurp Backwards ⌥⇧⌘9
+* Slurp Forwards  ⌥⇧⌘0
+* Splice          ⌃⌥S
 
 ## License
 

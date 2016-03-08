@@ -31,7 +31,12 @@ public final class SlurpBackwardsAction extends EditorAction {
 
             PsiElement copy = slurpee.copy();
             slurpee.delete();
-            sexp.addBefore(copy, SexpUtils.firstChildSexp(sexp));
+            PsiElement firstChild = SexpUtils.firstChildSexp(sexp);
+            if (firstChild != null) {
+                sexp.addBefore(copy, firstChild);
+            } else {
+                sexp.addAfter(copy, sexp.getFirstChild());
+            }
         }
     }
 }
