@@ -1,5 +1,5 @@
 <idea-plugin version="2">
-  <id>zjhmale.rainbow</id>
+  <id>zjhmale.paredit</id>
   <name>Paredit</name>
   <version>1.0</version>
   <vendor email="zjhmale@gmail.com" url="https://github.com/zjhmale">zjhmale</vendor>
