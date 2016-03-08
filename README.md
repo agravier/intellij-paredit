@@ -4,7 +4,7 @@ Paredit (Structural Editing) is a fancy editing style to edit code especially fo
 
 ## Snapshot
 
-![](./pics/snapshot.png)
+![](./pics/snapshot.gif)
 
 ## ShortCuts
 
