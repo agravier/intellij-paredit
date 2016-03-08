@@ -16,6 +16,6 @@ Paredit (Structural Editing) is a fancy editing style to edit code especially fo
 
 ## License
 
-Copyright © 2016 zjhmale
+Copyright 2009 JetBrains s.r.o.
 
-Released under the terms of the MIT License
+Licensed under the Apache License, Version 2.0
