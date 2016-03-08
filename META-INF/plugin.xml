@@ -41,14 +41,14 @@
     <action id="zjhmale.paredit.BarfBackwardsAction"
             class="zjhmale.paredit.BarfBackwardsAction"
             text="Barf Backwards" description="Spit out the first element in the current s-expression">
-      <keyboard-shortcut keymap="$default" first-keystroke="alt shift 9"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt ctrl 9"/>
       <add-to-group group-id="EditMenu" anchor="last"/>
     </action>
 
     <action id="zjhmale.paredit.BarfForwardsAction"
             class="zjhmale.paredit.BarfForwardsAction"
             text="Barf Forwards" description="Spit out the last element in the current s-expression">
-      <keyboard-shortcut keymap="$default" first-keystroke="alt shift 0"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt ctrl 0"/>
       <add-to-group group-id="EditMenu" anchor="last"/>
     </action>
 

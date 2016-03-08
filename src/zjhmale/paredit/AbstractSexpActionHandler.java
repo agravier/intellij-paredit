@@ -23,22 +23,25 @@ abstract class AbstractSexpActionHandler extends EditorWriteActionHandler {
     private static boolean isWrap(PsiElement element, int caretPos) {
         String text = element.getText();
         int offset = element.getTextOffset();
+        boolean isWrapBraces = false;
+        boolean isWrapParenthesis = false;
+        boolean isWrapBrackets = false;
         if (text.contains("{") && text.contains("}")) {
             int lpos = offset + text.indexOf("{");
             int rpos = offset + text.indexOf("}");
-            return lpos <= caretPos && caretPos <= rpos;
+            isWrapBraces = lpos <= caretPos && caretPos <= rpos;
         }
         if (text.contains("(") && text.contains(")")) {
             int lpos = offset + text.indexOf("(");
             int rpos = offset + text.indexOf(")");
-            return lpos <= caretPos && caretPos <= rpos;
+            isWrapParenthesis = lpos <= caretPos && caretPos <= rpos;
         }
         if (text.contains("[") && text.contains("]")) {
             int lpos = offset + text.indexOf("[");
             int rpos = offset + text.indexOf("]");
-            return lpos <= caretPos && caretPos <= rpos;
+            isWrapBrackets = lpos <= caretPos && caretPos <= rpos;
         }
-        return false;
+        return isWrapBraces || isWrapParenthesis || isWrapBrackets;
     }
 
     public static

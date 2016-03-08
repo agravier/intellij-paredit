@@ -23,7 +23,7 @@ public final class SlurpForwardsAction extends EditorAction {
         protected void executeWriteAction(PsiElement sexp, Editor editor, Project project, DataContext dataContext) {
             PsiElement slurpee = PsiTreeUtil.getNextSiblingOfType(sexp, PsiElement.class);
 
-            while (slurpee != null && ((slurpee instanceof PsiWhiteSpaceImpl) || slurpee.getText().equals(" "))) {
+            while (slurpee instanceof PsiWhiteSpaceImpl) {
                 slurpee = PsiTreeUtil.getNextSiblingOfType(slurpee, PsiElement.class);
             }
 

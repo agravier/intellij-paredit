@@ -27,10 +27,6 @@ public final class BarfForwardsAction extends EditorAction {
             PsiElement copy = barfee.copy();
             barfee.delete();
             sexp.getParent().addAfter(copy, sexp);
-
-            if (sexp.getChildren().length == 0) {
-                sexp.delete();
-            }
         }
     }
 }
